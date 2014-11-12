@@ -9,12 +9,13 @@ $ ->
 
   $('#submitWord').click ->
     if wordCount < 5
-      wordCount++
       word = $('#wordInput').val()
-      socket.emit 'new word', word
+      unless wordsMap[word]
+        wordCount++
+        socket.emit 'new word', word
 
-      $("#word#{wordCount}").text(word)
-      wordsMap[word] = wordCount
+        $("#word#{wordCount}").text(word)
+        wordsMap[word] = wordCount
 
   socket.on 'snap', (data) ->
     console.log "snap!"
