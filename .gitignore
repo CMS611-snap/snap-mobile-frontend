@@ -2,5 +2,5 @@
 *.swp
 *.swo
 node_modules
-public/js/main.js
+public/javascripts/main.js
 *.log
