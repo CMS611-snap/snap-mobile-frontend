@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .container-fluid
+    .row
+      .col-xs-7
+        input#wordInput.form-control(type="text", placeholder="Enter a word")
+      .col-xs-5
+        button#submitWord.btn.btn-block.btn-primary(type="button") Submit
+    .row
+      .col-xs-1 1.
+      .col-xs-5#word1
+      .col-xs-2#score1
+    .row
+      .col-xs-1 2.
+      .col-xs-5#word2
+      .col-xs-2#score2
+    .row
+      .col-xs-1 3.
+      .col-xs-5#word3
+      .col-xs-2#score3
+    .row
+      .col-xs-1 4.
+      .col-xs-5#word4
+      .col-xs-2#score4
+    .row
+      .col-xs-6 SNAPS
+      .col-xs-4#totalScore
